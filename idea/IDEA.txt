@@ -1,0 +1,7 @@
+- patients
+
+- calendrier
+
+- statistiques
+
+- parmètres
