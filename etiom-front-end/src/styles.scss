@@ -1,7 +1,13 @@
-@include mat-core();
+@use "@angular/material" as mat;
+
+@include mat.core();
 
 body {
   height: 100vh;
   width: 100vw;
   margin: unset;
+}
+
+router-outlet + * {
+  flex: 1;
 }
