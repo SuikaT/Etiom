@@ -1,7 +1,13 @@
-- patients
+- page de connexion
 
+- patients : - liste patients
+             - detail patient sélectionné
+			 - prochain patient			 
 - calendrier
 
 - statistiques
 
 - parmètres
+
+- détails des données non exporté
+

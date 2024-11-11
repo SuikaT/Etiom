@@ -1,13 +1,28 @@
 @use "@angular/material" as mat;
+@use "theme/variables.scss" as var;
+@use "sass:map";
 
 @include mat.core();
 
 body {
-  height: 100vh;
-  width: 100vw;
-  margin: unset;
+	height: 100vh;
+	width: 100vw;
+	margin: unset;
 }
 
 router-outlet + * {
-  flex: 1;
+	flex: 1;
+}
+
+.light-theme {
+	@include mat.core-theme(var.$light-theme);
+}
+
+.dark-theme {
+	@include mat.core-color(var.$dark-theme);
+}
+
+.contrast-background {
+	background-color: mat.get-theme-color(var.$dark-theme, primary, 50);
+	color: mat.get-theme-color(var.$dark-theme, on-background);
 }

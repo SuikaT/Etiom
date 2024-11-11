@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { ThemeService } from "../../services/theme.service";
 
 @Component({
-  selector: 'app-menu',
-  standalone: true,
-  imports: [],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+	selector: "app-menu",
+	standalone: true,
+	imports: [],
+	templateUrl: "./menu.component.html",
+	styleUrl: "./menu.component.scss",
 })
 export class MenuComponent {
-
+	constructor(public theme: ThemeService) {}
 }
