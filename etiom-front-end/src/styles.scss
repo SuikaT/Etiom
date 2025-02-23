@@ -14,15 +14,13 @@ router-outlet + * {
 	flex: 1;
 }
 
-.light-theme {
-	@include mat.core-theme(var.$light-theme);
-}
+@include mat.all-component-themes($light-theme);
 
 .dark-theme {
-	@include mat.core-color(var.$dark-theme);
+	@include mat.all-component-themes($light-theme);
 }
 
-.contrast-background {
-	background-color: mat.get-theme-color(var.$light-theme, primary, 50);
-	color: mat.get-theme-color(var.$light-theme, on-background);
-}
+// .contrast-background {
+// 	background-color: mat.get-theme-color(var.$light-theme, primary, 50);
+// 	color: mat.get-theme-color(var.$light-theme, on-background);
+// }

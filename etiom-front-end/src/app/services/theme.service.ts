@@ -1,4 +1,4 @@
-import { Injectable, Renderer2, RendererFactory2 } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { ThemeEnum } from "../model/enums/theme";
 import { CookieService } from "ngx-cookie-service";
 
@@ -6,17 +6,13 @@ import { CookieService } from "ngx-cookie-service";
 	providedIn: "root",
 })
 export class ThemeService {
-	private renderer: Renderer2;
 	private currentTheme = ThemeEnum.LIGHT;
 
-	constructor(rendererFactory: RendererFactory2, private cookie: CookieService) {
-		this.renderer = rendererFactory.createRenderer(null, null);
-	}
+	constructor(private cookie: CookieService) {}
 
 	toggleTheme() {
 		const newTheme = this.currentTheme == ThemeEnum.LIGHT ? ThemeEnum.DARK : ThemeEnum.LIGHT;
-		this.renderer.removeClass(document.body, this.currentTheme);
-		this.renderer.addClass(document.body, newTheme);
+		document.body.classList.toggle(newTheme);
 		this.currentTheme = newTheme;
 
 		this.cookie.set("theme", newTheme, 90);
@@ -24,12 +20,11 @@ export class ThemeService {
 
 	initTheme() {
 		let theme = this.cookie.get("theme") as ThemeEnum;
-		console.log(theme);
 		if (!this.isValidTheme(theme)) {
-			theme = ThemeEnum.DARK;
+			theme = ThemeEnum.LIGHT;
 		}
 
-		this.renderer.addClass(document.body, theme);
+		document.body.classList.add(theme);
 		this.currentTheme = theme;
 
 		// refresh cookie
@@ -37,6 +32,6 @@ export class ThemeService {
 	}
 
 	isValidTheme(theme: ThemeEnum) {
-		return theme && (theme == ThemeEnum.LIGHT || theme == ThemeEnum.DARK);
+		return theme == ThemeEnum.LIGHT || theme == ThemeEnum.DARK;
 	}
 }
