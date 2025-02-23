@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { CustomTableComponent } from "ngx-custom-table";
 
 @Component({
-  selector: 'app-patients',
-  standalone: true,
-  imports: [],
-  templateUrl: './patients.component.html',
-  styleUrl: './patients.component.scss'
+	selector: "app-patients",
+	standalone: true,
+	imports: [CustomTableComponent],
+	templateUrl: "./patients.component.html",
+	styleUrl: "./patients.component.scss",
 })
-export class PatientsComponent {
-
-}
+export class PatientsComponent {}
