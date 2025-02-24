@@ -1,9 +1,5 @@
 @use "@angular/material" as mat;
 @use "theme/variables.scss" as var;
-@use "sass:map";
-
-// @include mat.elevation-classes();
-// @include mat.app-background();
 
 body {
 	height: 100vh;
