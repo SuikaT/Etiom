@@ -2,25 +2,31 @@
 @use "theme/variables.scss" as var;
 @use "sass:map";
 
-@include mat.core();
+// @include mat.elevation-classes();
+// @include mat.app-background();
 
 body {
 	height: 100vh;
 	width: 100vw;
 	margin: unset;
+
+	background: var(--mat-sys-background);
+	color: var(--mat-sys-on-background);
 }
 
 router-outlet + * {
 	flex: 1;
 }
 
-@include mat.all-component-themes($light-theme);
-
-.dark-theme {
-	@include mat.all-component-themes($light-theme);
+.light-theme {
+	@include mat.theme(var.$light-theme);
 }
 
-// .contrast-background {
-// 	background-color: mat.get-theme-color(var.$light-theme, primary, 50);
-// 	color: mat.get-theme-color(var.$light-theme, on-background);
-// }
+.dark-theme {
+	@include mat.theme(var.$dark-theme);
+}
+
+.contrast-background {
+	background: mat.get-theme-color(var.$light-theme, primary, 50);
+	color: white;
+}

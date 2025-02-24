@@ -1,25 +1,17 @@
 @use "@angular/material" as mat;
 
 // Define a dark theme
-$dark-theme: mat.theme(
-	(
-		color: (
-			primary: mat.$cyan-palette,
-			theme-type: dark,
-		),
-		typography: Roboto,
-		density: 0,
-	)
+$dark-theme: (
+	color: (
+		primary: mat.$cyan-palette,
+		theme-type: dark,
+	),
 );
 
 // Define a light theme
-$light-theme: mat.theme(
-	(
-		color: (
-			primary: mat.$cyan-palette,
-			theme-type: light,
-		),
-		typography: Roboto,
-		density: 0,
-	)
+$light-theme: (
+	color: (
+		primary: mat.$cyan-palette,
+		theme-type: light,
+	),
 );
