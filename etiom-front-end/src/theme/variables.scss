@@ -6,6 +6,8 @@ $dark-theme: (
 		primary: mat.$cyan-palette,
 		theme-type: dark,
 	),
+	typography: Roboto,
+	density: 0,
 );
 
 // Define a light theme
@@ -14,4 +16,8 @@ $light-theme: (
 		primary: mat.$cyan-palette,
 		theme-type: light,
 	),
+	typography: Roboto,
+	density: 0,
 );
+
+$contrast-background: mat.get-theme-color($light-theme, primary, 60);

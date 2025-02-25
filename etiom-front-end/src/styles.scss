@@ -23,6 +23,5 @@ router-outlet + * {
 }
 
 .contrast-background {
-	background: mat.get-theme-color(var.$light-theme, primary, 50);
-	color: white;
+	background: var.$contrast-background;
 }
