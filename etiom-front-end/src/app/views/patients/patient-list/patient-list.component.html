@@ -1,9 +1,9 @@
 <mat-card appearance="outlined">
-	<mat-card-header>
-		<mat-card-title>Patients</mat-card-title>
-		<input />
-	</mat-card-header>
-	<mat-card-content>
-		<ngx-custom-table></ngx-custom-table>
-	</mat-card-content>
+    <mat-card-header>
+        <mat-card-title>Patients</mat-card-title>
+        <input />
+    </mat-card-header>
+    <mat-card-content>
+        <ngx-custom-table [datas]="patients" [displayedFields]="['lastname', 'firstname', 'age']"></ngx-custom-table>
+    </mat-card-content>
 </mat-card>
