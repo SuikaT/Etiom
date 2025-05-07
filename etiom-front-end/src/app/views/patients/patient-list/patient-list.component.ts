@@ -13,6 +13,18 @@ import { Patient } from "../../../model/interfaces/Patient";
 export class PatientListComponent {
     displayedFields = ["lastname", "firstname", "age", "phone", "birthDate", "adress", "socialWelfare", "healthInsurance", "appointmentCount"];
 
+    columnTitles = new Map<string, string>([
+        ["lastname", "Nom"],
+        ["firstname", "prenom"],
+        ["age", "Age"],
+        ["phone", "Téléphone"],
+        ["birthDate", "Date de naissance"],
+        ["adress", "Adresse"],
+        ["socialWelfare", "Sécurité sociale"],
+        ["healthInsurance", "Mutuelle"],
+        ["appointmentCount", "Nombre de rendez-vous"],
+    ]);
+
     patients: Patient[] = [
         { firstname: "John", lastname: "Doe", age: 25 },
         { firstname: "Jane", lastname: "Smith", age: 30 },
