@@ -1,5 +1,6 @@
 @use "@angular/material" as mat;
 @use "theme/variables.scss" as var;
+@use "theme/overrides/overrides.scss";
 
 html,
 body {
@@ -7,8 +8,8 @@ body {
     margin: 0;
     overflow: hidden;
 
-    background: var(--mat-sys-background);
-    color: var(--mat-sys-on-background);
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
 }
 
 router-outlet + * {
@@ -17,14 +18,16 @@ router-outlet + * {
 
 .light-theme {
     @include mat.theme(var.$light-theme);
+    @include overrides.theme-overrides();
 }
 
 .dark-theme {
     @include mat.theme(var.$dark-theme);
+    @include overrides.theme-overrides();
 }
 
 .contrast-background {
-    background: var(--contrast-background);
+    background: var(--mat-sys-primary);
 }
 
 * {
