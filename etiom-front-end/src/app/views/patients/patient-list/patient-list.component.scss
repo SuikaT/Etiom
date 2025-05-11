@@ -1,3 +1,37 @@
 mat-card {
     height: 100%;
 }
+
+mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4rem;
+}
+
+mat-card-content {
+    overflow: hidden;
+}
+
+.mat-mdc-card-content {
+    padding-left: 0;
+    padding-right: 0;
+
+    ngx-custom-table {
+        padding: 0 1rem;
+    }
+}
+
+::ng-deep .column-adress {
+    text-wrap: unset;
+}
+
+.search-bar {
+    border-radius: 20px;
+    border: 1px solid var(--grey);
+    width: 12rem;
+    padding: 0 0.5rem;
+
+    &:focus-visible {
+        outline: none;
+    }
+}

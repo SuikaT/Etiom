@@ -1,10 +1,11 @@
 @use "@angular/material" as mat;
 @use "theme/variables.scss" as var;
 
+html,
 body {
     height: 100%;
-    width: 100%;
-    margin: unset;
+    margin: 0;
+    overflow: hidden;
 
     background: var(--mat-sys-background);
     color: var(--mat-sys-on-background);
@@ -23,7 +24,7 @@ router-outlet + * {
 }
 
 .contrast-background {
-    background: var.$contrast-background;
+    background: var(--contrast-background);
 }
 
 * {
