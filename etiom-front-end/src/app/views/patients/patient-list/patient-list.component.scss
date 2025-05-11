@@ -21,8 +21,8 @@ mat-card-content {
     }
 }
 
-::ng-deep .column-adress {
-    text-wrap: unset;
+::ng-deep .td-address {
+    text-wrap: unset !important;
 }
 
 .search-bar {

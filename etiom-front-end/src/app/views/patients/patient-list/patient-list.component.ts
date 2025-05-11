@@ -12,7 +12,7 @@ import { patientsTest } from "../../../test/patient-dummy";
     styleUrl: "./patient-list.component.scss",
 })
 export class PatientListComponent {
-    displayedFields = ["lastname", "firstname", "age", "phone", "birthDate", "adress", "socialWelfare", "healthInsurance"];
+    displayedFields = ["lastname", "firstname", "age", "phone", "birthDate", "address", "socialWelfare", "healthInsurance"];
 
     columnTitles = new Map<string, string>([
         ["lastname", "Nom"],

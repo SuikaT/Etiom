@@ -4,7 +4,7 @@ export interface Patient {
     age: number;
     phone?: string;
     birthDate?: Date;
-    adress?: string;
+    address?: string;
     socialWelfare?: string;
     healthInsurance?: string;
     appointmentCount?: number;
